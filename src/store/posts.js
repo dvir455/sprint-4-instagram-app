@@ -1,4 +1,4 @@
-import { createSlice, current } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { Posts } from '../data/posts.js';
 const initialPostsState = { posts: Posts };
 
@@ -28,10 +28,12 @@ const postsSlice = createSlice({
     addLike(state, action) {
       const postIdx = findPostIdx(state.posts, action.payload.postId);
       const isLiked = state.posts[postIdx].likedBy.find(
+        //TODO CHANGE TO ===
         (like) => like._id == action.payload.likeInfo._id
       );
       if (isLiked != undefined) {
         const likeIdx = state.posts[postIdx].likedBy.findIndex(
+          //TODO CHANGE TO ===
           (like) => like._id == action.payload.likeInfo._id
         );
         state.posts[postIdx].likedBy.splice(likeIdx, 1);

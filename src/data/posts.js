@@ -50,7 +50,7 @@ export const Posts = [
     ],
     likedBy: [
       {
-        _id: 5,
+        _id: 'das',
         fullname: 'Bob',
         imgUrl: 'http://some-img',
       },

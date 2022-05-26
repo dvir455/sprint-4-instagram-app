@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { imgList } from '../../data/images/importImages';
-import { iconList } from '../../data/icons/importSvg';
 import { useDispatch } from 'react-redux';
 import { postsActions } from '../../store/posts';
 import { utilService } from '../../services/util.services';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBookmark,
+  faHeart,
+  faComment,
+  faPaperPlane,
+  faTrashCan,
+  faFaceSmile,
+} from '@fortawesome/free-regular-svg-icons';
 
 const Post = (props) => {
   const dispatch = useDispatch();
@@ -68,10 +76,17 @@ const Post = (props) => {
         <img src={imgUrl} />
       </div>
       <div className="post-actions">
-        <img className="svg" src={iconList.like} onClick={likeHandler} />
-        <img className="svg" src={iconList.comment} />
-        <img className="svg" src={iconList.share} />
-        {/* <img className='svg' src={iconList.save}/> */}
+        <div className="main-actions">
+          <FontAwesomeIcon
+            icon={faHeart}
+            onClick={likeHandler}
+            className="svg"
+          />
+          <FontAwesomeIcon icon={faComment} className="svg" />
+          <FontAwesomeIcon icon={faPaperPlane} className="svg" />
+        </div>
+
+        <FontAwesomeIcon icon={faBookmark} className="svg" />
       </div>
       <div className="post-info">
         <div className="post-likes">{post.likedBy.length} likes</div>
@@ -85,21 +100,20 @@ const Post = (props) => {
                 <span className="comment-username">{comment.by.fullname} </span>
                 <span className="comment-txt">{comment.txt}</span>
               </p>
-              <button
+              <FontAwesomeIcon
+                icon={faTrashCan}
                 className="comment-delete"
                 onClick={() => {
                   removeCommentHandler(post._id, comment.id);
                 }}
-              >
-                X
-              </button>
+              />
             </div>
           ))}
         </div>
         <div className="post-date">{moment(post.createdAt).fromNow()}</div>
         <div className="comment-add-section">
           <form className="post-add-comment" onSubmit={commentHandler}>
-            <button className="comment-emoji">😀</button>
+            <FontAwesomeIcon icon={faFaceSmile} className="svg" />
             <input
               type="text"
               value={commentTxt}
