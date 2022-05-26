@@ -1,0 +1,18 @@
+.logincmp-container {
+  width: 350px;
+  height: 396px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  margin: 0 0 10px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 99px 265px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.login-cmp-logo {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
