@@ -4,13 +4,13 @@ import Feed from './pages/Feed';
 import Login from './pages/Login';
 import PostPopup from './cmps/feed-cmps/PostPopup';
 function App() {
-  const logiz = false;
+  const logiz = true;
 
   return (
     <div className="App">
-      {/* {logiz && <NavBar />}
-      {logiz ? <Feed /> : <Login />} */}
-      <PostPopup />
+       {logiz && <NavBar />}
+       {logiz ? <Feed /> : <Login />}
+      {/* <PostPopup /> */}
     </div>
   );
 }
