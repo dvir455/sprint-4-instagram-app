@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import AccountSuggestions from '../cmps/feed-cmps/AccountSuggestions';
 
 const Feed = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.posts);
 
   return (

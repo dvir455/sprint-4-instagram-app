@@ -5,14 +5,9 @@ import { postsActions } from '../../store/posts';
 import { utilService } from '../../services/util.services';
 import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBookmark,
-  faHeart,
-  faComment,
-  faPaperPlane,
-  faTrashCan,
-  faFaceSmile,
-} from '@fortawesome/free-regular-svg-icons';
+import { faTrashCan, faFaceSmile } from '@fortawesome/free-regular-svg-icons';
+import PostActions from '../general-cmps/PostActions';
+import CommentsCmp from '../general-cmps/CommentsCmp';
 
 const Post = (props) => {
   const dispatch = useDispatch();
@@ -41,23 +36,6 @@ const Post = (props) => {
     setCommentTxt('');
   };
 
-  const removeCommentHandler = (postId, commentId) => {
-    dispatch(postsActions.removeComment({ postId, commentId }));
-  };
-
-  const likeHandler = () => {
-    dispatch(
-      postsActions.addLike({
-        postId: post._id,
-        likeInfo: {
-          _id: 5,
-          fullname: 'Dvir Yomtovian',
-          imgUrl: 'http://some-img',
-        },
-      })
-    );
-  };
-
   return (
     <article className="post-container">
       <header>
@@ -76,17 +54,7 @@ const Post = (props) => {
         <img src={imgUrl} />
       </div>
       <div className="post-actions">
-        <div className="main-actions">
-          <FontAwesomeIcon
-            icon={faHeart}
-            onClick={likeHandler}
-            className="svg"
-          />
-          <FontAwesomeIcon icon={faComment} className="svg" />
-          <FontAwesomeIcon icon={faPaperPlane} className="svg" />
-        </div>
-
-        <FontAwesomeIcon icon={faBookmark} className="svg" />
+        <PostActions post={post} />
       </div>
       <div className="post-info">
         <div className="post-likes">{post.likedBy.length} likes</div>
@@ -94,7 +62,7 @@ const Post = (props) => {
           <span>{post.by.fullname}</span> {post.txt}
         </div>
         <div className="post-comments">
-          {post.comments.map((comment) => (
+          {/* {post.comments.map((comment) => (
             <div className="comment-container" key={comment.id}>
               <p>
                 <span className="comment-username">{comment.by.fullname} </span>
@@ -108,7 +76,8 @@ const Post = (props) => {
                 }}
               />
             </div>
-          ))}
+          ))} */}
+          <CommentsCmp post={post} />
         </div>
         <div className="post-date">{moment(post.createdAt).fromNow()}</div>
         <div className="comment-add-section">
