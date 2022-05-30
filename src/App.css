@@ -1,9 +1,9 @@
 @import './styles/reset.css';
 @import './styles/general.css';
-@import './styles/feed/feed.css';
-@import './styles//navBar.css';
-@import './styles/feed/post.css';
+@import './styles/feed/Feed.css';
+@import './styles/navBar/NavBar.css';
+@import './styles/feed/Post.css';
 @import './styles/fonts.css';
-@import './styles/login/login.css';
-@import './styles/login/logincmp.css';
-@import './styles/postPopUp/postPopUp.css'
+@import './styles/login/Login.css';
+@import './styles/login/LoginCmp.css';
+@import './styles/postPopUp/PostPopup.css';

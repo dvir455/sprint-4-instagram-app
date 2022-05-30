@@ -1,11 +1,18 @@
-.feed-container{
+.feed-container {
+  display: -ms-grid;
   display: grid;
-grid-template-columns: 38.375rem 18.3125rem;
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-justify-content: center;
-font-family: Segoe;
-color: #262626;
-margin-block-start: 85px;
+  -ms-grid-columns: 38.375rem 18.3125rem;
+      grid-template-columns: 38.375rem 18.3125rem;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Segoe;
+  color: #262626;
+  -webkit-margin-before: 85px;
+          margin-block-start: 85px;
 }
+/*# sourceMappingURL=Feed.css.map */

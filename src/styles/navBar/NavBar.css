@@ -1,6 +1,8 @@
 .nav-borders {
   font-family: Segoe;
   width: 56.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   top: 0%;
@@ -8,6 +10,8 @@
   height: 60px;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -16,13 +20,20 @@
 }
 
 .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 56.6875rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .search-bar {
+  display: -ms-grid;
   display: grid;
   width: 236px;
   height: 36px;
@@ -31,12 +42,28 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 .search-bar input {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   height: 80%;
   line-height: 18px;
 }
 
-.search-bar input::placeholder {
+.search-bar input ::-webkit-input-placeholder {
   color: #8e8e8e;
 }
+
+.search-bar input :-ms-input-placeholder {
+  color: #8e8e8e;
+}
+
+.search-bar input ::-ms-input-placeholder {
+  color: #8e8e8e;
+}
+
+.search-bar input ::placeholder {
+  color: #8e8e8e;
+}
+/*# sourceMappingURL=NavBar.css.map */

@@ -1,18 +1,10 @@
 .login-container {
-  display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (22.375rem) [2]; */
   grid-template-columns: repeat(2, 22.375rem);
-  -ms-grid-rows: auto;
   grid-template-rows: auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-margin-before: 2rem;
   margin-block-start: 2rem;
-  -webkit-margin-after: 2rem;
   margin-block-end: 2rem;
 }
-/*# sourceMappingURL=Login.css.map */

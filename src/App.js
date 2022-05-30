@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="App">
-       {logiz && <NavBar />}
-       {logiz ? <Feed /> : <Login />}
+      {logiz && <NavBar />}
+      {logiz ? <Feed /> : <Login />}
       {/* <PostPopup /> */}
     </div>
   );
