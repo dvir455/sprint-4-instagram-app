@@ -7,3 +7,5 @@
 @import './styles/login/Login.css';
 @import './styles/login/LoginCmp.css';
 @import './styles/postPopUp/PostPopup.css';
+@import './styles/General-Cmps/PostAddComment.css';
+@import './styles/General-Cmps/PostActions.css';

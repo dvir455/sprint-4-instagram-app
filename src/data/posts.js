@@ -1,6 +1,6 @@
 export const Posts = [
   {
-    _id: 's101',
+    _id: '0',
     txt: 'Best trip ever',
     imgUrl: 'one',
     createdAt: 123543452,
@@ -63,7 +63,7 @@ export const Posts = [
     tags: ['fun', 'kids'],
   },
   {
-    _id: 's301',
+    _id: '1',
     txt: 'Best trip ever',
     imgUrl: 'two',
     createdAt: 123543452,
@@ -126,7 +126,7 @@ export const Posts = [
     tags: ['fun', 'kids'],
   },
   {
-    _id: 's601',
+    _id: '2',
     txt: 'Best trip ever',
     imgUrl: 'three',
     createdAt: 123543452,

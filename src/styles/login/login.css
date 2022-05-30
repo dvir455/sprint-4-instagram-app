@@ -1,18 +1,49 @@
 .login-container {
-  display: -ms-grid;
-  display: grid;
-  /* -ms-grid-columns: (22.375rem) [2]; */
-  grid-template-columns: repeat(2, 22.375rem);
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  height: 659px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 935px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-margin-before: 2rem;
-  margin-block-start: 2rem;
-  -webkit-margin-after: 2rem;
-  margin-block-end: 2rem;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+}
+
+.Login__Img__Container {
+  margin-right: 32px;
+  background-image: url("https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png");
+  background-position: -46px 0;
+  height: 581.15px;
+  -ms-flex-preferred-size: 380.32px;
+      flex-basis: 380.32px;
+}
+
+.Login__SignUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  height: 63px;
+  border: 1px solid #dbdbdb;
+  background-color: #ffffff;
+}
+
+.Login__SignUp a {
+  font-weight: 600;
+  color: #0095f6;
+  margin-left: 4px;
 }
 /*# sourceMappingURL=Login.css.map */

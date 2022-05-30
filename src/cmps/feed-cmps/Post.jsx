@@ -8,12 +8,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan, faFaceSmile } from '@fortawesome/free-regular-svg-icons';
 import PostActions from '../general-cmps/PostActions';
 import CommentsCmp from '../general-cmps/CommentsCmp';
+import PostAddComment from '../general-cmps/PostAddComment';
 
 const Post = (props) => {
   const dispatch = useDispatch();
   const { post } = props;
   const imgUrl = imgList[post.imgUrl];
 
+  //Todo set isLiked to true or false based on user liked
+  const [isLiked, setIsLiked] = useState(false);
   const [commentTxt, setCommentTxt] = useState('');
 
   const commentHandler = (event, txt) => {
@@ -53,8 +56,8 @@ const Post = (props) => {
       <div className="post-img">
         <img src={imgUrl} />
       </div>
-      <div className="post-actions">
-        <PostActions post={post} />
+      <div>
+        <PostActions post={post} isLiked={isLiked} setIsLiked={setIsLiked} />
       </div>
       <div className="post-info">
         <div className="post-likes">{post.likedBy.length} likes</div>
@@ -62,26 +65,11 @@ const Post = (props) => {
           <span>{post.by.fullname}</span> {post.txt}
         </div>
         <div className="post-comments">
-          {/* {post.comments.map((comment) => (
-            <div className="comment-container" key={comment.id}>
-              <p>
-                <span className="comment-username">{comment.by.fullname} </span>
-                <span className="comment-txt">{comment.txt}</span>
-              </p>
-              <FontAwesomeIcon
-                icon={faTrashCan}
-                className="comment-delete"
-                onClick={() => {
-                  removeCommentHandler(post._id, comment.id);
-                }}
-              />
-            </div>
-          ))} */}
           <CommentsCmp post={post} />
         </div>
         <div className="post-date">{moment(post.createdAt).fromNow()}</div>
         <div className="comment-add-section">
-          <form className="post-add-comment" onSubmit={commentHandler}>
+          {/* <form className="post-add-comment" onSubmit={commentHandler}>
             <FontAwesomeIcon icon={faFaceSmile} className="svg" />
             <input
               type="text"
@@ -92,7 +80,8 @@ const Post = (props) => {
               placeholder="Add a comment..."
             />
             <button className="comment-post">Post</button>
-          </form>
+          </form> */}
+          <PostAddComment post={post} />
         </div>
       </div>
     </article>

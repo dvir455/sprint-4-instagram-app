@@ -1,6 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import {
   faBookmark,
   faHeart,
@@ -9,11 +12,15 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import { postsActions } from '../../store/posts';
 
-
-
 const PostActions = (props) => {
-  const { post } = props;
+  const { post, isLiked, setIsLiked } = props;
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const routeChange = () => {
+    const path = `/p/${post._id}`;
+    history.push(path);
+  };
 
 
   const likeHandler = () => {
@@ -27,17 +34,23 @@ const PostActions = (props) => {
         },
       })
     );
+    setIsLiked(!isLiked);
+  };
+
+  const likeStyle = {
+    color: '#ed4956',
   };
 
   return (
-    <div className='popup-actions-post-info'>
+    <div className="popup-actions-post-info">
       <div className="main-actions">
         <FontAwesomeIcon
-          icon={faHeart}
+          icon={isLiked ? faHeartSolid : faHeart}
           onClick={likeHandler}
-          className="svg"
+          className="svg --fa-style"
+          style={isLiked ? likeStyle : ''}
         />
-        <FontAwesomeIcon icon={faComment} className="svg" />
+        <FontAwesomeIcon icon={faComment} onClick={routeChange} className="svg" />
         <FontAwesomeIcon icon={faPaperPlane} className="svg" />
       </div>
 

@@ -13,11 +13,17 @@
   position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: -1;
+  button {
+    position: fixed;
+    font-size: 2rem;
+    top: 0.7rem;
+    right: 1rem;
+    color: white;
+  }
 }
 
 .post-popup {
-  /* background-color: #fff; */
+  z-index: 1;
   display: grid;
   grid-template-columns: auto 499px;
   grid-template-rows: auto;
@@ -70,12 +76,12 @@
   grid-area: 4 / 1 / 5 / 2;
 }
 
-.publisher-txt{
-
- span {
-  font-weight: 600;
-  font-size: 14px;
-}}
+.publisher-txt {
+  span {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
 
 .popup-actions {
   border-top: 1px solid #efefef;

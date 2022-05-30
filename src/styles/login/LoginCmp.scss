@@ -1,18 +1,102 @@
 .logincmp-container {
+  font-family: Segoe;
+  border: 1px solid rgb(219, 219, 219);
   width: 350px;
-  height: 396px;
-  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  // height: 396px;
   margin: 0 0 10px;
-  padding: 10px 0;
+  padding: 10px 40px 0 40px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 99px 265px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  background-color: #ffffff;
 }
 
 .login-cmp-logo {
   display: grid;
   align-self: center;
   justify-self: center;
+  width: 171px;
+}
+
+.LoginCmp__OrDevider {
+  margin: 10px 0;
+  display: flex;
+
+  .LoginCmp__Or {
+    margin: 0px 18px;
+    font-weight: 600;
+    color: rgb(142, 142, 142);
+    font-size: 13px;
+  }
+
+  .LoginCmp__devider {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 1px;
+    position: relative;
+    top: 0.45em;
+    background-color: rgb(219, 219, 219);
+  }
+}
+
+.LoginCmp__form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    // margin: 10px 0px;
+    padding: 10px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    font-size: 13px;
+    background-color: #fafafa;
+
+    color: #aa8e8e;
+
+    ::placeholder {
+      font-size: 10px;
+    }
+
+    &:focus {
+      border: 1px solid rgb(168, 168, 168);
+    }
+  }
+  :nth-child(2) {
+    margin-top: 7px;
+    margin-bottom: 6px;
+  }
+}
+
+.LoginCmp__LoginBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #b2dffc;
+  margin: 8px 0;
+  height: 30px;
+  border-radius: 4px;
+  width: auto;
+  color: white;
+}
+
+.LoginCmp__OtherOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  :first-child {
+    color: #385185;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  :nth-child(2) {
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 12px;
+  }
 }

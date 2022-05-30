@@ -9,6 +9,7 @@ const PostAddComment = (props) => {
   const [commentTxt, setCommentTxt] = useState('');
   const dispatch = useDispatch();
   const { post } = props;
+
   const commentHandler = (event, txt) => {
     event.preventDefault();
     if (commentTxt.length === 0) return;
@@ -37,10 +38,17 @@ const PostAddComment = (props) => {
         value={commentTxt}
         onChange={(event) => {
           setCommentTxt(event.target.value);
+          console.log(event.target.value);
         }}
         placeholder="Add a comment..."
       />
-      <button className="comment-post">Post</button>
+      <button
+        className={
+          commentTxt.length > 0 ? 'postBtnStyleActive' : 'postBtnStyleInactive'
+        }
+      >
+        Post
+      </button>
     </form>
   );
 };

@@ -1,0 +1,61 @@
+.postBtnStyleActive {
+  color: #0095f7;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.postBtnStyleInactive {
+  color: #b3dffc;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.post-add-comment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 27px;
+      grid-template-columns: 40px 1fr 27px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 1 / 6 / 2;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}
+
+.post-add-comment input {
+  font-size: 14px;
+}
+
+.post-add-comment input::-webkit-input-placeholder {
+  color: #8e8e8e;
+  line-height: 18px;
+}
+
+.post-add-comment input:-ms-input-placeholder {
+  color: #8e8e8e;
+  line-height: 18px;
+}
+
+.post-add-comment input::-ms-input-placeholder {
+  color: #8e8e8e;
+  line-height: 18px;
+}
+
+.post-add-comment input::placeholder {
+  color: #8e8e8e;
+  line-height: 18px;
+}
+/*# sourceMappingURL=PostAddComment.css.map */
