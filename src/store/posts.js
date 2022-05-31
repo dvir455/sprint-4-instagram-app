@@ -1,17 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { postsService } from '../services/posts.service.js';
 import { Posts } from '../data/posts.js';
+
 const initialPostsState = { posts: Posts };
 
 const findPostIdx = (posts, postId) => {
   return posts.findIndex((currPost) => currPost._id === postId);
 };
 
+// const initialState = {
+//   posts: [],
+//   status: 'idle',
+//   error: null,
+// };
+
 const postsSlice = createSlice({
   name: 'posts',
-  initialState: initialPostsState,
+  initialState: {
+    posts: [],
+    status: null,
+  },
   reducers: {
     addComment(state, action) {
-      const postIdx = findPostIdx(state.posts, action.payload.postId);
+      const postIdx = findPostIdx(state.posts.posts, action.payload.postId);
       state.posts[postIdx].comments.push(action.payload.comment);
     },
 
@@ -40,6 +51,18 @@ const postsSlice = createSlice({
       } else {
         state.posts[postIdx].likedBy.push(action.payload.likeInfo);
       }
+    },
+  },
+  extraReducers: {
+    [postsService.query.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [postsService.query.fulfilled]: (state, action) => {
+      state.status = 'success';
+      state.posts = action.payload;
+    },
+    [postsService.query.rejected]: (state, action) => {
+      state.status = 'failure';
     },
   },
 });

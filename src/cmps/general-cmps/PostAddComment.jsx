@@ -31,7 +31,8 @@ const PostAddComment = (props) => {
   };
 
   return (
-    <form className="post-add-comment" onSubmit={commentHandler}>
+    <form className="PostAddComment__container" onSubmit={commentHandler}>
+      {/* //TODO - Make a popup emoji list */}
       <FontAwesomeIcon icon={faFaceSmile} className="svg" />
       <input
         type="text"
@@ -44,7 +45,9 @@ const PostAddComment = (props) => {
       />
       <button
         className={
-          commentTxt.length > 0 ? 'postBtnStyleActive' : 'postBtnStyleInactive'
+          commentTxt.length > 0
+            ? 'PostAddComment__postBtnActive'
+            : 'PostAddComment__postBtnInactive'
         }
       >
         Post

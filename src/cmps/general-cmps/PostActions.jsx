@@ -22,7 +22,6 @@ const PostActions = (props) => {
     history.push(path);
   };
 
-
   const likeHandler = () => {
     dispatch(
       postsActions.addLike({
@@ -50,7 +49,11 @@ const PostActions = (props) => {
           className="svg --fa-style"
           style={isLiked ? likeStyle : ''}
         />
-        <FontAwesomeIcon icon={faComment} onClick={routeChange} className="svg" />
+        <FontAwesomeIcon
+          icon={faComment}
+          onClick={routeChange}
+          className="svg"
+        />
         <FontAwesomeIcon icon={faPaperPlane} className="svg" />
       </div>
 

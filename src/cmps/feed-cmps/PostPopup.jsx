@@ -7,7 +7,7 @@ import PostAddComment from '../general-cmps/PostAddComment';
 import CommentsCmp from '../general-cmps/CommentsCmp';
 import { useHistory } from 'react-router-dom';
 
-const PostPopup = (props) => {
+const PostPopup = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.posts);
   const { postId } = useParams();

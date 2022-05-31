@@ -69,18 +69,6 @@ const Post = (props) => {
         </div>
         <div className="post-date">{moment(post.createdAt).fromNow()}</div>
         <div className="comment-add-section">
-          {/* <form className="post-add-comment" onSubmit={commentHandler}>
-            <FontAwesomeIcon icon={faFaceSmile} className="svg" />
-            <input
-              type="text"
-              value={commentTxt}
-              onChange={(event) => {
-                setCommentTxt(event.target.value);
-              }}
-              placeholder="Add a comment..."
-            />
-            <button className="comment-post">Post</button>
-          </form> */}
           <PostAddComment post={post} />
         </div>
       </div>

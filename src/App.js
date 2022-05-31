@@ -21,8 +21,12 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/p/:postId"><PostPopup/> </Route>
-        <Route path="/" exact>{logiz ? isLoggedIn() : <Login />}</Route>
+        <Route path="/p/:postId">
+          <PostPopup />{' '}
+        </Route>
+        <Route path="/" exact>
+          {logiz ? isLoggedIn() : <Login />}
+        </Route>
       </Switch>
     </div>
   );

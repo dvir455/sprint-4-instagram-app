@@ -1,18 +1,18 @@
-.postBtnStyleActive {
+.PostAddComment__postBtnActive {
   color: #0095f7;
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
 }
 
-.postBtnStyleInactive {
+.PostAddComment__postBtnInactive {
   color: #b3dffc;
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
 }
 
-.post-add-comment {
+.PostAddComment__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 1fr 27px;
@@ -35,27 +35,33 @@
   padding-right: 1rem;
 }
 
-.post-add-comment input {
+.PostAddComment__container input {
   font-size: 14px;
 }
 
-.post-add-comment input::-webkit-input-placeholder {
+.PostAddComment__container input::-webkit-input-placeholder {
   color: #8e8e8e;
   line-height: 18px;
 }
 
-.post-add-comment input:-ms-input-placeholder {
+.PostAddComment__container input:-ms-input-placeholder {
   color: #8e8e8e;
   line-height: 18px;
 }
 
-.post-add-comment input::-ms-input-placeholder {
+.PostAddComment__container input::-ms-input-placeholder {
   color: #8e8e8e;
   line-height: 18px;
 }
 
-.post-add-comment input::placeholder {
+.PostAddComment__container input::placeholder {
   color: #8e8e8e;
   line-height: 18px;
+}
+
+.PostAddComment__container .svg {
+  height: 24px;
+  width: 24px;
+  padding: 8px;
 }
 /*# sourceMappingURL=PostAddComment.css.map */

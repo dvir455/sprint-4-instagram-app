@@ -138,10 +138,6 @@ header {
   font-weight: 600;
 }
 
-.svg {
-  padding: 8px 1rem 8px 0;
-}
-
 .comment-emoji {
   height: 40px;
   width: 40px;
@@ -186,11 +182,5 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.svg {
-  height: 24px;
-  width: 24px;
-  padding: 8px;
 }
 /*# sourceMappingURL=Post.css.map */
