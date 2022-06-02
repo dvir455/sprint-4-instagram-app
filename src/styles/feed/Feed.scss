@@ -1,11 +1,15 @@
-.feed-container{
+.feed-container {
   display: grid;
-grid-template-columns: 38.375rem 18.3125rem;
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-justify-content: center;
-font-family: Segoe;
-color: #262626;
-margin-block-start: 85px;
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto,38.375rem) minmax(auto,18.3125rem) minmax(
+      1rem,
+      1fr
+    );
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  color: #262626;
+  margin-block-start: 85px;
 }
+
+

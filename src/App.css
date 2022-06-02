@@ -9,3 +9,5 @@
 @import './styles/postPopUp/PostPopup.css';
 @import './styles/General-Cmps/PostAddComment.css';
 @import './styles/General-Cmps/PostActions.css';
+
+@import './styles/General-Cmps/loading.css';

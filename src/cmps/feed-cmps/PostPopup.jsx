@@ -35,11 +35,11 @@ const PostPopup = () => {
             <p>{post.loc.name}</p>
           </div>
           <div className="popup-comment-section">
-            <div className="publisher-txt">
+            <div className="post-txt">
               <span>{post.by.fullname}</span>
               {post.txt}
             </div>
-            <div className="popup-comments">
+            <div className="post-comments">
               {/* {post.comments.map((comment) => (
                 <div className="comment-container" key={comment.id}>
                   <p>

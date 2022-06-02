@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { postsService } from '../../services/posts.service';
 
 import {
   faBookmark,
@@ -23,17 +24,26 @@ const PostActions = (props) => {
   };
 
   const likeHandler = () => {
-    dispatch(
-      postsActions.addLike({
-        postId: post._id,
-        likeInfo: {
-          _id: 5,
-          fullname: 'Dvir Yomtovian',
-          imgUrl: 'http://some-img',
-        },
-      })
-    );
-    setIsLiked(!isLiked);
+    // dispatch(
+    //   postsActions.addLike({
+    //     postId: post._id,
+    //     likeInfo: {
+    //       _id: 5,
+    //       fullname: 'Dvir Yomtovian',
+    //       imgUrl: 'http://some-img',
+    //     },
+    //   })
+    // );
+    dispatch(postsService.likePost({
+      userId: 'ddd',
+      postId: post._id,
+      likeInfo: {
+        _id: 'ddd',
+        fullname: 'Dvir Yomtovian',
+        imgUrl: 'http://some-img',
+      },
+    }));
+      setIsLiked(!isLiked);
   };
 
   const likeStyle = {

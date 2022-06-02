@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { useDispatch } from 'react-redux';
 import { postsActions } from '../../store/posts';
+import { postsService } from '../../services/posts.service';
 const CommentsCmp = (props) => {
   const { post } = props;
   const dispatch = useDispatch();
 
   const removeCommentHandler = (postId, commentId) => {
-    dispatch(postsActions.removeComment({ postId, commentId }));
+    dispatch(postsService.deleteComment({ postId, commentId }));
   };
 
   return (

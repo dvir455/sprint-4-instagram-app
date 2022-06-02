@@ -19,25 +19,6 @@ const Post = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const [commentTxt, setCommentTxt] = useState('');
 
-  const commentHandler = (event, txt) => {
-    event.preventDefault();
-    if (commentTxt.length === 0) return;
-    dispatch(
-      postsActions.addComment({
-        postId: post._id,
-        comment: {
-          id: utilService.makeid(),
-          by: {
-            _id: utilService.makeid(),
-            fullname: 'Dvir Yomtovian',
-            imgUrl: 'http://some-img',
-          },
-          txt: commentTxt,
-        },
-      })
-    );
-    setCommentTxt('');
-  };
 
   return (
     <article className="post-container">

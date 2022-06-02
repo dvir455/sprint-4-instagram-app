@@ -1,27 +1,29 @@
 import Post from '../cmps/feed-cmps/Post';
 import { useSelector, useDispatch } from 'react-redux';
 import AccountSuggestions from '../cmps/feed-cmps/AccountSuggestions';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { postsService } from '../services/posts.service';
 
 const Feed = () => {
   const dispatch = useDispatch();
-  const { posts } = useSelector((state) => state.posts);
+  const loadingStatus = useSelector(state => state.posts.loadingStatus);
 
   useEffect(() => {
     dispatch(postsService.query());
-  });
+  }, []);
+  const { posts } = useSelector((state) => state.posts);
 
   return (
     <div className="feed-container">
-      <div className="main-feed">
+      {loadingStatus === 'loading' && <div className="loading"></div>}
+      {loadingStatus === 'success' && <div className="Post__mainFeed">
         {posts.map((post) => {
           return <Post key={post._id} post={post} />;
         })}
-      </div>
-      <AccountSuggestions />
+      </div>}
+      {loadingStatus === 'failure' && <div className="loading-posts">Error...</div>}
     </div>
-  );
+  )
 };
 
 export default Feed;

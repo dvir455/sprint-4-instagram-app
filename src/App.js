@@ -12,7 +12,8 @@ function App() {
     if (logiz) {
       return (
         <React.Fragment>
-          <Feed />; <NavBar />
+          <Feed />
+          <NavBar />
         </React.Fragment>
       );
     }
@@ -22,7 +23,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/p/:postId">
-          <PostPopup />{' '}
+          <PostPopup />
         </Route>
         <Route path="/" exact>
           {logiz ? isLoggedIn() : <Login />}
@@ -33,7 +34,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* {logiz ? isLoggedIn(): <Login />} */
-}

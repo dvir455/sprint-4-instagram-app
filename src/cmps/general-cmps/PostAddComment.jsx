@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { postsActions } from '../../store/posts';
+import { postsService } from '../../services/posts.service';
 import { utilService } from '../../services/util.services';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,20 +14,32 @@ const PostAddComment = (props) => {
   const commentHandler = (event, txt) => {
     event.preventDefault();
     if (commentTxt.length === 0) return;
-    dispatch(
-      postsActions.addComment({
-        postId: post._id,
-        comment: {
-          id: utilService.makeid(),
-          by: {
-            _id: utilService.makeid(),
-            fullname: 'Dvir Yomtovian',
-            imgUrl: 'http://some-img',
-          },
-          txt: commentTxt,
+    // dispatch(
+    //   postsActions.addComment({
+    //     postId: post._id,
+    //     comment: {
+    //       id: utilService.makeid(),
+    //       by: {
+    //         _id: utilService.makeid(),
+    //         fullname: 'Dvir Yomtovian',
+    //         imgUrl: 'http://some-img',
+    //       },
+    //       txt: commentTxt,
+    //     },
+    //   })
+    // );
+    dispatch(postsService.addComment({
+      postId: post._id,
+      comment: {
+        id: utilService.makeid(),
+        by: {
+          _id: utilService.makeid(),
+          fullname: 'Dvir Yomtovian',
+          imgUrl: 'http://some-img',
         },
-      })
-    );
+        txt: commentTxt,
+      }
+    }));
     setCommentTxt('');
   };
 

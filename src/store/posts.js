@@ -2,29 +2,30 @@ import { createSlice } from '@reduxjs/toolkit';
 import { postsService } from '../services/posts.service.js';
 import { Posts } from '../data/posts.js';
 
-const initialPostsState = { posts: Posts };
+// const initialPostsState = { posts: Posts };
 
 const findPostIdx = (posts, postId) => {
   return posts.findIndex((currPost) => currPost._id === postId);
 };
-
-// const initialState = {
-//   posts: [],
-//   status: 'idle',
-//   error: null,
-// };
 
 const postsSlice = createSlice({
   name: 'posts',
   initialState: {
     posts: [],
     status: null,
+    loadingStatus: null
   },
   reducers: {
-    addComment(state, action) {
-      const postIdx = findPostIdx(state.posts.posts, action.payload.postId);
-      state.posts[postIdx].comments.push(action.payload.comment);
-    },
+    // addComment(state, action) {
+    //   const postIdx = findPostIdx(state.posts, action.payload.postId);
+    //   try {
+    //     postsService.addComment(postIdx, action.payload.comment);
+    //     state.posts[postIdx].comments.push(action.payload.comment);
+    //   } catch (e) {
+    //     console.log('Error adding comment: ', e);
+    //   }
+    //   // state.posts[postIdx].comments.push(action.payload.comment);
+    // },
 
     //TODO LET USER ONLY REMOVE HIS COMMENTS
     removeComment(state, action) {
@@ -55,13 +56,54 @@ const postsSlice = createSlice({
   },
   extraReducers: {
     [postsService.query.pending]: (state, action) => {
-      state.status = 'loading';
+      state.loadingStatus = 'loading';
     },
     [postsService.query.fulfilled]: (state, action) => {
-      state.status = 'success';
+      state.loadingStatus = 'success';
       state.posts = action.payload;
     },
     [postsService.query.rejected]: (state, action) => {
+      state.loadingStatus = 'failure';
+    },
+
+    [postsService.addComment.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [postsService.addComment.fulfilled]: (state, action) => {
+      state.status = 'success';
+      state.posts[action.payload.postId].comments.push(action.payload.comment);
+    },
+    [postsService.addComment.rejected]: (state, action) => {
+      state.status = 'failure';
+    },
+    [postsService.deleteComment.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [postsService.deleteComment.fulfilled]: (state, action) => {
+      state.status = 'success';
+      state.posts[action.payload.postId].comments.splice(
+        action.payload.commentIdx,
+        1
+      );
+    },
+    [postsService.deleteComment.rejected]: (state, action) => {
+      state.status = 'failure';
+    },
+    [postsService.likePost.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [postsService.likePost.fulfilled]: (state, action) => {
+      state.status = 'success';
+      if (action.payload.likeIdx < 0) {
+        state.posts[action.payload.postId].likedBy.push(action.payload.liked);
+      } else {
+        state.posts[action.payload.postId].likedBy.splice(
+          action.payload.likeIdx,
+          1
+        );
+      }
+    },
+    [postsService.likePost.rejected]: (state, action) => {
       state.status = 'failure';
     },
   },
