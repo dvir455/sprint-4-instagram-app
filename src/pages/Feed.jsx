@@ -21,7 +21,13 @@ const Feed = () => {
           return <Post key={post._id} post={post} />;
         })}
       </div>}
-      {loadingStatus === 'failure' && <div className="loading-posts">Error...</div>}
+      {loadingStatus === 'failure' && <div className="message">
+        <h1>500</h1>
+        <h3>Server Error - Failed to load posts</h3>
+        <h2>It's not you, it's me.</h2>
+        <h2>Please try again later</h2>
+      </div>
+      }
     </div>
   )
 };
