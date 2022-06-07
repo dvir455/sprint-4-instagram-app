@@ -35,13 +35,13 @@ const PostActions = (props) => {
     //   })
     // );
     dispatch(postsService.likePost({
-      userId: 'ddd',
+      // userId: 'ddd',
       postId: post._id,
-      likeInfo: {
-        _id: 'ddd',
-        fullname: 'Dvir Yomtovian',
-        imgUrl: 'http://some-img',
-      },
+      // likeInfo: {
+      //   _id: 'ddd',
+      //   fullname: 'Dvir Yomtovian',
+      //   imgUrl: 'http://some-img',
+      // },
     }));
       setIsLiked(!isLiked);
   };
