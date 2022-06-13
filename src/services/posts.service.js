@@ -41,12 +41,13 @@ const deleteComment = createAsyncThunk(
 const likePost = createAsyncThunk(
   'posts/likePost',
   async (payload, comment) => {
-    // console.log('payload', payload);
+    console.log('payload', payload);
     try {
       const response = await axios.post(
         `${POSTS_URL}/${payload.postId}/like`,
         payload
       );
+      // console.log(response.data);
       return response.data;
     } catch (e) {
       console.log('Error liking post: ', e.message);

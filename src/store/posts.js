@@ -13,7 +13,7 @@ const postsSlice = createSlice({
   initialState: {
     posts: [],
     status: null,
-    loadingStatus: null
+    loadingStatus: null,
   },
   reducers: {
     // addComment(state, action) {
@@ -39,6 +39,7 @@ const postsSlice = createSlice({
     //TODO CHECK IF USE ALREADY LIKES THE PHOTO AND ADD INDICATION
     addLike(state, action) {
       const postIdx = findPostIdx(state.posts, action.payload.postId);
+      // console.log('postIdx: ', postIdx);
       const isLiked = state.posts[postIdx].likedBy.find(
         //TODO CHANGE TO ===
         (like) => like._id == action.payload.likeInfo._id
@@ -94,6 +95,7 @@ const postsSlice = createSlice({
     },
     [postsService.likePost.fulfilled]: (state, action) => {
       state.status = 'success';
+      console.log('action.payload: ', action.payload);
       if (action.payload.likeIdx < 0) {
         state.posts[action.payload.postId].likedBy.push(action.payload.liked);
       } else {

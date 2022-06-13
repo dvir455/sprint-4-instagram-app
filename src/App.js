@@ -4,12 +4,14 @@ import Feed from './pages/Feed';
 import Login from './pages/Login';
 import PostPopup from './cmps/feed-cmps/PostPopup';
 import { Switch, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import React from 'react';
 function App() {
-  const logiz = true;
+  const loggedIn = useSelector(state => state.user.user);
 
   const isLoggedIn = () => {
-    if (logiz) {
+    if (loggedIn) {
       return (
         <React.Fragment>
           <Feed />
@@ -26,7 +28,7 @@ function App() {
           <PostPopup />
         </Route>
         <Route path="/" exact>
-          {logiz ? isLoggedIn() : <Login />}
+          {loggedIn ? isLoggedIn() : <Login />}
         </Route>
       </Switch>
     </div>

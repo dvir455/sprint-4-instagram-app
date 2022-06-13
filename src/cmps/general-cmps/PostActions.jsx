@@ -24,16 +24,6 @@ const PostActions = (props) => {
   };
 
   const likeHandler = () => {
-    // dispatch(
-    //   postsActions.addLike({
-    //     postId: post._id,
-    //     likeInfo: {
-    //       _id: 5,
-    //       fullname: 'Dvir Yomtovian',
-    //       imgUrl: 'http://some-img',
-    //     },
-    //   })
-    // );
     dispatch(postsService.likePost({
       // userId: 'ddd',
       postId: post._id,
