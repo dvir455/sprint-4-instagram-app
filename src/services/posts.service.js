@@ -13,7 +13,7 @@ const addComment = createAsyncThunk(
   async (payload, comment) => {
     try {
       const response = await httpService.post(
-        `${POSTS_URL}/${payload.postId}`,
+        `${POSTS_URL}`,
         payload
       );
       return response;
@@ -28,10 +28,10 @@ const deleteComment = createAsyncThunk(
   'posts/deleteComment',
   async (payload, comment) => {
     try {
-      const response = await axios.delete(
+      const response = await httpService.delete(
         `${POSTS_URL}/${payload.postId}/${payload.commentId}`
       );
-      return response.data;
+      return response;
     } catch (e) {
       console.log('Error deleting comment: ', e.message);
       throw new Error(e.message);
@@ -42,7 +42,6 @@ const deleteComment = createAsyncThunk(
 const likePost = createAsyncThunk(
   'posts/likePost',
   async (payload, comment) => {
-    console.log('payload', payload);
     try {
       const response = await httpService.post(
         `${POSTS_URL}/${payload.postId}/like`,

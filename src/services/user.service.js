@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { httpService } from './http.service';
 const USER_URL = 'http://localhost:3030/api/user';
@@ -27,5 +26,5 @@ const checkLoggon = createAsyncThunk('user/checkLoggon', async () => {
 
 export const userService = {
   login,
-  checkLoggon
+  checkLoggon,
 };

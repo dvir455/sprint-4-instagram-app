@@ -82,13 +82,15 @@ const postsSlice = createSlice({
     },
     [postsService.deleteComment.fulfilled]: (state, action) => {
       state.status = 'success';
-      state.posts[action.payload.postId].comments.splice(
-        action.payload.commentIdx,
-        1
-      );
+      state.posts[action.payload.postId].comments = action.payload.postComments;
+      // state.posts[action.payload.postId].comments.splice(
+      //   action.payload.commentIdx,
+      //   1
+      // );
     },
     [postsService.deleteComment.rejected]: (state, action) => {
       state.status = 'failure';
+      console.log('Error deleting comment: ', action.payload);
     },
     [postsService.likePost.pending]: (state, action) => {
       state.status = 'loading';

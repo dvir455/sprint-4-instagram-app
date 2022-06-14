@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import { postsActions } from '../../store/posts';
 import { postsService } from '../../services/posts.service';
 import { utilService } from '../../services/util.services';
 import { useState } from 'react';
@@ -14,24 +13,12 @@ const PostAddComment = (props) => {
   const commentHandler = (event, txt) => {
     event.preventDefault();
     if (commentTxt.length === 0) return;
-   
+
     dispatch(postsService.addComment({
       postId: post._id,
       commentTxt,
       commentId: utilService.makeid(),
     }));
-    // dispatch(postsService.addComment({
-    //   postId: post._id,
-    //   comment: {
-    //     id: utilService.makeid(),
-    //     by: {
-    //       _id: utilService.makeid(),
-    //       fullname: 'Dvir Yomtovian',
-    //       imgUrl: 'http://some-img',
-    //     },
-    //     txt: commentTxt,
-    //   }
-    // }));
     setCommentTxt('');
   };
 
@@ -44,7 +31,6 @@ const PostAddComment = (props) => {
         value={commentTxt}
         onChange={(event) => {
           setCommentTxt(event.target.value);
-          console.log(event.target.value);
         }}
         placeholder="Add a comment..."
       />

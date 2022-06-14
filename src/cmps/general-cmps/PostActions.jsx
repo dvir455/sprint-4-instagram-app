@@ -11,13 +11,11 @@ import {
   faComment,
   faPaperPlane,
 } from '@fortawesome/free-regular-svg-icons';
-// import { postsActions } from '../../store/posts';
 
 const PostActions = (props) => {
   const { post } = props;
   const dispatch = useDispatch();
   const history = useHistory();
-// console.log(post)
   const { user } = useSelector((state) => state.user);
 
 
