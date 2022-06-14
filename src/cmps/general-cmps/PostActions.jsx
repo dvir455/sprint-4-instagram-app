@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
@@ -11,12 +11,27 @@ import {
   faComment,
   faPaperPlane,
 } from '@fortawesome/free-regular-svg-icons';
-import { postsActions } from '../../store/posts';
+// import { postsActions } from '../../store/posts';
 
 const PostActions = (props) => {
-  const { post, isLiked, setIsLiked } = props;
+  const { post } = props;
   const dispatch = useDispatch();
   const history = useHistory();
+// console.log(post)
+  const { user } = useSelector((state) => state.user);
+
+
+  const checkIfLiked = () => {
+    if(!post || post.likedBy.length === 0) return
+    const liked = post.likedBy.find((like) => {
+      return like._id === user._id});
+    return liked
+  }
+
+  //Todo set isLiked to true or false based on user liked
+  const [isLiked, setIsLiked] = useState(checkIfLiked);
+
+
 
   const routeChange = () => {
     const path = `/p/${post._id}`;
@@ -25,15 +40,13 @@ const PostActions = (props) => {
 
   const likeHandler = () => {
     dispatch(postsService.likePost({
-      // userId: 'ddd',
       postId: post._id,
-      // likeInfo: {
-      //   _id: 'ddd',
-      //   fullname: 'Dvir Yomtovian',
-      //   imgUrl: 'http://some-img',
-      // },
-    }));
+      // setIsLiked,
+      // isLiked
+    })).then(() => {
+      
       setIsLiked(!isLiked);
+    });
   };
 
   const likeStyle = {
@@ -41,24 +54,26 @@ const PostActions = (props) => {
   };
 
   return (
-    <div className="popup-actions-post-info">
-      <div className="main-actions">
-        <FontAwesomeIcon
-          icon={isLiked ? faHeartSolid : faHeart}
-          onClick={likeHandler}
-          className="svg --fa-style"
-          style={isLiked ? likeStyle : ''}
-        />
-        <FontAwesomeIcon
-          icon={faComment}
-          onClick={routeChange}
-          className="svg"
-        />
-        <FontAwesomeIcon icon={faPaperPlane} className="svg" />
-      </div>
-
-      <FontAwesomeIcon icon={faBookmark} className="svg" />
+    <React.Fragment>
+    {post &&  <div className="popup-actions-post-info">
+    <div className="main-actions">
+      <FontAwesomeIcon
+        icon={isLiked ? faHeartSolid : faHeart}
+        onClick={likeHandler}
+        className="svg --fa-style"
+        style={isLiked ? likeStyle : ''}
+      />
+      <FontAwesomeIcon
+        icon={faComment}
+        onClick={routeChange}
+        className="svg"
+      />
+      <FontAwesomeIcon icon={faPaperPlane} className="svg" />
     </div>
+
+    <FontAwesomeIcon icon={faBookmark} className="svg" />
+  </div>}
+  </React.Fragment>
   );
 };
 

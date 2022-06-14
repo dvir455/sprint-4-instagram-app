@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { httpService } from './http.service';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-const POSTS_URL = 'http://127.0.0.1:3030/api/posts';
+const POSTS_URL = 'http://localhost:3030/api/posts';
 
 const query = createAsyncThunk('posts/query', async () => {
   const response = await axios.get(POSTS_URL);
@@ -11,11 +12,11 @@ const addComment = createAsyncThunk(
   'posts/addComment',
   async (payload, comment) => {
     try {
-      const response = await axios.post(
+      const response = await httpService.post(
         `${POSTS_URL}/${payload.postId}`,
-        payload.comment
+        payload
       );
-      return response.data;
+      return response;
     } catch (e) {
       console.log('Error adding comment: ', e.message);
       throw new Error(e.message);
@@ -43,12 +44,11 @@ const likePost = createAsyncThunk(
   async (payload, comment) => {
     console.log('payload', payload);
     try {
-      const response = await axios.post(
+      const response = await httpService.post(
         `${POSTS_URL}/${payload.postId}/like`,
         payload
       );
-      // console.log(response.data);
-      return response.data;
+      return response;
     } catch (e) {
       console.log('Error liking post: ', e.message);
       throw new Error(e.message);

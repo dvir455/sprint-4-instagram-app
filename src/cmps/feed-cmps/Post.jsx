@@ -1,23 +1,27 @@
 import { useState } from 'react';
 import { imgList } from '../../data/images/importImages';
-import { useDispatch } from 'react-redux';
-import { postsActions } from '../../store/posts';
+import { useDispatch, useSelector  } from 'react-redux';
 import { utilService } from '../../services/util.services';
 import moment from 'moment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashCan, faFaceSmile } from '@fortawesome/free-regular-svg-icons';
 import PostActions from '../general-cmps/PostActions';
 import CommentsCmp from '../general-cmps/CommentsCmp';
 import PostAddComment from '../general-cmps/PostAddComment';
 
 const Post = (props) => {
   const dispatch = useDispatch();
+  // const { user } = useSelector((state) => state.user);
+
   const { post } = props;
   const imgUrl = imgList[post.imgUrl];
 
-  //Todo set isLiked to true or false based on user liked
-  const [isLiked, setIsLiked] = useState(false);
-  const [commentTxt, setCommentTxt] = useState('');
+  // const checkIfLiked = () => {
+  //   console.log(post.likedBy)
+  //   console.log(user)
+  //  const liked = post.likedBy.find((like) => like._id === user._id);
+  //  console.log(liked)
+  //  return liked
+  // }
+
 
 
   return (
@@ -38,7 +42,7 @@ const Post = (props) => {
         <img src={imgUrl} />
       </div>
       <div>
-        <PostActions post={post} isLiked={isLiked} setIsLiked={setIsLiked} />
+        <PostActions post={post}  />
       </div>
       <div className="post-info">
         <div className="post-likes">{post.likedBy.length} likes</div>

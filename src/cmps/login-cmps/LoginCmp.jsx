@@ -11,7 +11,6 @@ const loginHandler = (e) => {
   e.preventDefault();
   if (password.length === 0 || username.length === 0) return;
   dispatch(userService.login({ username, password }));
-
 }
 
   return (

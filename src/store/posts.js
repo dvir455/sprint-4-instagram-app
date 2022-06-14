@@ -72,7 +72,7 @@ const postsSlice = createSlice({
     },
     [postsService.addComment.fulfilled]: (state, action) => {
       state.status = 'success';
-      state.posts[action.payload.postId].comments.push(action.payload.comment);
+      state.posts[action.payload.postId].comments = action.payload.postComments;
     },
     [postsService.addComment.rejected]: (state, action) => {
       state.status = 'failure';
@@ -94,16 +94,9 @@ const postsSlice = createSlice({
       state.status = 'loading';
     },
     [postsService.likePost.fulfilled]: (state, action) => {
-      state.status = 'success';
       console.log('action.payload: ', action.payload);
-      if (action.payload.likeIdx < 0) {
-        state.posts[action.payload.postId].likedBy.push(action.payload.liked);
-      } else {
-        state.posts[action.payload.postId].likedBy.splice(
-          action.payload.likeIdx,
-          1
-        );
-      }
+      state.status = 'success';
+      state.posts[action.payload.postId].likedBy = action.payload.likedBy;
     },
     [postsService.likePost.rejected]: (state, action) => {
       state.status = 'failure';

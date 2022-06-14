@@ -14,32 +14,24 @@ const PostAddComment = (props) => {
   const commentHandler = (event, txt) => {
     event.preventDefault();
     if (commentTxt.length === 0) return;
-    // dispatch(
-    //   postsActions.addComment({
-    //     postId: post._id,
-    //     comment: {
-    //       id: utilService.makeid(),
-    //       by: {
-    //         _id: utilService.makeid(),
-    //         fullname: 'Dvir Yomtovian',
-    //         imgUrl: 'http://some-img',
-    //       },
-    //       txt: commentTxt,
-    //     },
-    //   })
-    // );
+   
     dispatch(postsService.addComment({
       postId: post._id,
-      comment: {
-        id: utilService.makeid(),
-        by: {
-          _id: utilService.makeid(),
-          fullname: 'Dvir Yomtovian',
-          imgUrl: 'http://some-img',
-        },
-        txt: commentTxt,
-      }
+      commentTxt,
+      commentId: utilService.makeid(),
     }));
+    // dispatch(postsService.addComment({
+    //   postId: post._id,
+    //   comment: {
+    //     id: utilService.makeid(),
+    //     by: {
+    //       _id: utilService.makeid(),
+    //       fullname: 'Dvir Yomtovian',
+    //       imgUrl: 'http://some-img',
+    //     },
+    //     txt: commentTxt,
+    //   }
+    // }));
     setCommentTxt('');
   };
 
