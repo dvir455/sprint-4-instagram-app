@@ -1,17 +1,17 @@
 import { userService } from "../../services/user.service";
 import { useDispatch, useSelector } from "react-redux";
-import {useState} from 'react';
+import { useState } from 'react';
 const LoginCmp = () => {
 
-const dispatch = useDispatch();
-const [password, setPassword] = useState('');
-const [username, setUsername] = useState('');
+  const dispatch = useDispatch();
+  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
 
-const loginHandler = (e) => {
-  e.preventDefault();
-  if (password.length === 0 || username.length === 0) return;
-  dispatch(userService.login({ username, password }));
-}
+  const loginHandler = (e) => {
+    e.preventDefault();
+    if (password.length === 0 || username.length === 0) return;
+    dispatch(userService.login({ username, password }));
+  }
 
   return (
     <section className="logincmp-container">
@@ -20,12 +20,12 @@ const loginHandler = (e) => {
       </div>
       <div className="LoginCmp__LoginSection">
         <form action="" className="LoginCmp__form" onSubmit={loginHandler}>
-          <input type="text" placeholder="Phone number, username, or email" onChange={(event)=>{
+          <input type="text" placeholder="Phone number, username, or email" onChange={(event) => {
             setUsername(event.target.value);
-          }}/>
-          <input type="text" placeholder="Password" onChange={(event)=>{
+          }} />
+          <input type="text" placeholder="Password" onChange={(event) => {
             setPassword(event.target.value);
-          }}/>
+          }} />
           <button className="LoginCmp__LoginBtn">Log In</button>
         </form>
         <div className="LoginCmp__OrDevider">

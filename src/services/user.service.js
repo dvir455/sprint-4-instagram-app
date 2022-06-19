@@ -24,7 +24,18 @@ const checkLoggon = createAsyncThunk('user/checkLoggon', async () => {
   }
 });
 
+const logout = createAsyncThunk('user/logout', async () => {
+  try {
+    const response = await httpService.get(`${USER_URL}/logout`);
+    return response;
+  } catch (e) {
+    console.log('Error logging out: ', e.message);
+    throw new Error(e.message);
+  }
+});
+
 export const userService = {
   login,
   checkLoggon,
+  logout,
 };

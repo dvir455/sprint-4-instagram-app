@@ -1,4 +1,16 @@
+import {useDispatch } from 'react-redux';
+import { userService } from '../services/user.service';
+
 const NavBar = () => {
+const dispatch = useDispatch();
+  const logoutHandler = () => {
+    try{
+      dispatch(userService.logout());
+    } catch(e){
+      console.log(e);
+    }
+  }
+
   return (
     <div className="nav-borders">
       <nav className="nav-container">
@@ -8,7 +20,7 @@ const NavBar = () => {
         <div className="search-bar">
           <input type="text" placeholder="Search"/>
         </div>
-        <div className="nav-actions">actions</div>
+        <div className="nav-actions"><button onClick={logoutHandler}>Logout</button></div>
       </nav>
     </div>
   );

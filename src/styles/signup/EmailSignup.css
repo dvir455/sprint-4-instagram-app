@@ -1,0 +1,359 @@
+.EmailSignup__Cmp__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 44px;
+  min-width: 0;
+  height: 868px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 12px;
+  max-width: 350px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #dbdbdb;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-radius: 1px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__logo {
+  margin: 36px 0 12px 0;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__logo img {
+  height: 51px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form {
+  margin-bottom: 20px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form h2 {
+  color: #8e8e8e;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 40px 10px;
+  text-align: center;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form .EmailSignup__Submit {
+  margin: 8px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form .EmailSignup__Submit button {
+  background-color: #0095f6;
+  opacity: 1;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 9px;
+  text-align: center;
+  width: 100%;
+  line-height: 18px;
+  color: #fff;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__form .EmailSignup__Submit button:disabled {
+  background-color: rgba(0, 149, 246, 0.3);
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__FacebookLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 40px;
+  height: 32px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__FacebookLogin button {
+  color: #fff;
+  border-radius: 4px;
+  background-color: #0095f6;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 9px;
+  text-align: center;
+  width: 100%;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__FacebookLogin button span {
+  margin-right: 0.5rem;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__formArea__FacebookLogin button span svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__OrDevider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 40px 18px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__OrDevider .EmailSignup__devider {
+  background-color: #dbdbdb;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  height: 1px;
+  position: relative;
+  top: 0.45em;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__OrDevider .EmailSignup__Or {
+  color: #8e8e8e;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 18px;
+  text-transform: uppercase;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container {
+  margin: 0 40px 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 14px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container > * {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container:focus-within {
+  border: 1px solid #a8a8a8;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container label span {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  color: #8e8e8e;
+  font-size: 12px;
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+  position: absolute;
+  left: 8px;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform ease-out 0.1s;
+  transition: -webkit-transform ease-out 0.1s;
+  transition: transform ease-out 0.1s;
+  transition: transform ease-out 0.1s, -webkit-transform ease-out 0.1s;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Input__Container label input {
+  width: 100%;
+  line-height: 18px;
+  padding: 9px 0px 7px 8px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Info {
+  color: #8e8e8e;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 10px 40px;
+  text-align: center;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Info a {
+  color: #8e8e8e;
+  font-weight: 600;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Auth {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+.EmailSignup__Cmp__Container .input__active span {
+  left: 0;
+  -webkit-transition: -webkit-transform ease-out 0.1s;
+  transition: -webkit-transform ease-out 0.1s;
+  transition: transform ease-out 0.1s;
+  transition: transform ease-out 0.1s, -webkit-transform ease-out 0.1s;
+  -webkit-transform: scale(0.8333) translateY(-10px);
+          transform: scale(0.8333) translateY(-10px);
+}
+
+.EmailSignup__Cmp__Container .input__active label input {
+  font-size: 12px;
+  padding: 14px 0 2px 8px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  height: 63px;
+  border: 1px solid #dbdbdb;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Login a {
+  font-weight: 600;
+  color: #0095f6;
+  margin-left: 4px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Gettheapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Gettheapp p {
+  color: #262626;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Gettheapp .EmailSignup__Applinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Gettheapp .EmailSignup__Applinks a {
+  width: 136px;
+}
+
+.EmailSignup__Cmp__Container .EmailSignup__Gettheapp .EmailSignup__Applinks a:first-child {
+  margin-right: 8px;
+}
+/*# sourceMappingURL=emailsignup.css.map */

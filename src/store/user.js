@@ -30,7 +30,19 @@ const userSlice = createSlice({
     },
     [userService.checkLoggon.rejected]: (state, action) => {
       state.loadingStatus = 'failure';
-      console.log('Error logging in: ', action.error.message);
+      // console.log('Error logging in: ', action.error.message);
+    },
+
+    [userService.logout.pending]: (state, action) => {
+      state.loadingStatus = 'loading';
+    },
+    [userService.logout.fulfilled]: (state, action) => {
+      state.loadingStatus = 'success';
+      state.user = '';
+    },
+    [userService.logout.rejected]: (state, action) => {
+      state.loadingStatus = 'failure';
+      // console.log('Error logging in: ', action.error.message);
     },
   },
 });
