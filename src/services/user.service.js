@@ -14,6 +14,19 @@ const login = createAsyncThunk('user/login', async (payload) => {
   }
 });
 
+const signup = createAsyncThunk('user/signup', async (payload) => {
+  try {
+    const response = await httpService.post(`${USER_URL}/signup`, payload, {
+      withCredentials: true,
+    });
+
+    return response;
+  } catch (e) {
+    console.log('Error logging in: ', e.message);
+    throw new Error(e.message);
+  }
+});
+
 const checkLoggon = createAsyncThunk('user/checkLoggon', async () => {
   try {
     const response = await httpService.get(`${USER_URL}/checkLoggon`);
@@ -38,4 +51,5 @@ export const userService = {
   login,
   checkLoggon,
   logout,
+  signup,
 };

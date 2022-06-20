@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { userService } from '../services/user.service';
+import { useHistory } from 'react-router-dom';
 
 const userSlice = createSlice({
   name: 'user',
@@ -15,10 +16,22 @@ const userSlice = createSlice({
     [userService.login.fulfilled]: (state, action) => {
       state.loadingStatus = 'success';
       state.user = action.payload;
+      sessionStorage.setItem('user', JSON.stringify(action.payload));
     },
     [userService.login.rejected]: (state, action) => {
       state.loadingStatus = 'failure';
       console.log('Error logging in: ', action.error.message);
+    },
+
+    [userService.signup.pending]: (state, action) => {
+      state.loadingStatus = 'loading';
+    },
+    [userService.signup.fulfilled]: (state, action) => {
+      state.loadingStatus = 'success';
+    },
+    [userService.signup.rejected]: (state, action) => {
+      state.loadingStatus = 'failure';
+      throw new Error(action.error.message);
     },
 
     [userService.checkLoggon.pending]: (state, action) => {
