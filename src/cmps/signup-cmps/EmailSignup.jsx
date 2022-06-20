@@ -90,8 +90,8 @@ const EmailSignup = (props) => {
         <div className="EmailSignup__Gettheapp">
           <p>Get the app.</p>
           <div className="EmailSignup__Applinks">
-          <a aria-label="Download on the App Store"  href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8&amp;vt=lo" > <img alt="Download on the App Store" class="Rt8TI " src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"/></a>
-          <a aria-label="Get it on Google Play"  href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D425358FF-F5FF-473F-AD94-BE55AE6667E3%26utm_content%3Dlo%26utm_medium%3Dbadge" tabindex="0"><img alt="Get it on Google Play"  src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"/></a>
+          <a aria-label="Download on the App Store"  href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8&amp;vt=lo" > <img alt="Download on the App Store" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"/></a>
+          <a aria-label="Get it on Google Play"  href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D425358FF-F5FF-473F-AD94-BE55AE6667E3%26utm_content%3Dlo%26utm_medium%3Dbadge"><img alt="Get it on Google Play"  src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"/></a>
           </div>
         </div>
       </div>

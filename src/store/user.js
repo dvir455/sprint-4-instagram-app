@@ -38,7 +38,7 @@ const userSlice = createSlice({
     },
     [userService.logout.fulfilled]: (state, action) => {
       state.loadingStatus = 'success';
-      state.user = '';
+      state.user = null;
     },
     [userService.logout.rejected]: (state, action) => {
       state.loadingStatus = 'failure';

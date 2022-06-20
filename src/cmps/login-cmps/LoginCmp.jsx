@@ -18,8 +18,9 @@ const LoginCmp = () => {
       <div className="login-cmp-logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" />
       </div>
-      <div className="LoginCmp__LoginSection">
-        <form action="" className="LoginCmp__form" onSubmit={loginHandler}>
+      <div className=" LoginCmp__LoginSection ">
+        <form action="" className="LoginCmp__form " onSubmit={loginHandler}>
+   
           <input type="text" placeholder="Phone number, username, or email" onChange={(event) => {
             setUsername(event.target.value);
           }} />
