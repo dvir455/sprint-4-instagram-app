@@ -11,6 +11,7 @@ const CommentsCmp = (props) => {
     dispatch(postsService.deleteComment({ postId, commentId }));
   };
 
+
   return (
     <React.Fragment>
       {post.comments.map((comment) => (

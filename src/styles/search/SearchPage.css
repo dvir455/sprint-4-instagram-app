@@ -1,0 +1,54 @@
+.Search__mainContainer .Search__Params {
+  margin: 0 auto;
+  max-width: 935px;
+  padding: 30px 20px 0;
+  width: calc(100% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.Search__mainContainer .Search__Params .Serach__Params__Txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 14px;
+}
+
+.Search__mainContainer .Search__Params .Serach__Params__Txt h3 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #262626;
+  font-size: 18px;
+  line-height: 18px;
+  margin: -4px 0 -6px;
+}
+
+.Search__mainContainer .Search__Params .Serach__Params__Txt h3::first-letter {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=SearchPage.css.map */

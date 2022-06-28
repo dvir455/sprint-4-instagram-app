@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { userService } from '../../services/user.service'
 import { useHistory } from 'react-router-dom'
-const EmailSignup = (props) => {
+
+const EmailSignup = () => {
   const history = useHistory()
   const dispatch = useDispatch()
   const [email, setEmail] = useState('');
@@ -19,7 +20,6 @@ const EmailSignup = (props) => {
       history.push('/')
     }).catch(err => { console.log(err) })
   }
-
 
   return (
     <div className="EmailSignup__Cmp__Container">

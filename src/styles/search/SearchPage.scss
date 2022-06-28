@@ -1,0 +1,36 @@
+.Search__mainContainer {
+  .Search__Params {
+    margin: 0 auto;
+    max-width: 935px;
+    padding: 30px 20px 0;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-sizing: content-box;
+
+    .Serach__Params__Txt {
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: stretch;
+      height: 14px;
+
+      h3 {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 600;
+        color: rgb(38, 38, 38);
+        font-size: 18px;
+        line-height: 18px;
+        margin: -4px 0 -6px;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

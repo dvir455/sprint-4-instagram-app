@@ -1,4 +1,7 @@
 .post-popup-container {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
   width: 100%;
   height: 100vh;
   color: #333;

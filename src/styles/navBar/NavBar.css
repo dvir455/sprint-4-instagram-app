@@ -1,68 +1,281 @@
-.nav-borders {
-  width: 56.6875rem;
+.NavBar__Main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  top: 0%;
-  width: 100%;
-  height: 60px;
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
 }
 
-.logo {
-  width: 103px;
+.NavBar__Main .NavBar__PofilePic {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
 }
 
-.nav-container {
+.NavBar__Main .NavBar__PofilePic img {
+  border-radius: inherit;
+}
+
+.NavBar__Main .NavBar__Spacer {
+  -ms-flex-preferred-size: 60px;
+      flex-basis: 60px;
+}
+
+.NavBar__Main .NavBar__Container {
+  background-color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 56.6875rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  width: 100%;
+  z-index: 3;
 }
 
-.search-bar {
-  display: -ms-grid;
-  display: grid;
-  width: 236px;
-  height: 36px;
-  background-color: #efefef;
+.NavBar__Main .NavBar__InnerContainer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: calc(935px + 40px);
+  padding: 0 20px;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  width: 100%;
+  z-index: 10;
+}
+
+.NavBar__Main .NavBar__Logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 127px;
+          flex: 1 0 127px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.NavBar__Main .NavBar__Logo img {
+  width: 103px;
+}
+
+.NavBar__Main .NavBar__SearchBar {
   border-radius: 8px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 36px;
+  min-width: 125px;
+  position: relative;
+  width: 268px;
 }
 
-.search-bar input {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  height: 80%;
-  line-height: 18px;
+.NavBar__Main .NavBar__SearchBar .NavBar__Input {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.search-bar input ::-webkit-input-placeholder {
-  color: #8e8e8e;
+.NavBar__Main .NavBar__SearchBar .NavBar__Input input {
+  background-color: #efefef;
+  padding: 3px 16px;
+  border: 0;
+  color: #262626;
+  outline: none;
+  z-index: 2;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
 }
 
-.search-bar input :-ms-input-placeholder {
-  color: #8e8e8e;
+.NavBar__Main .NavBar__SearchBar .NavBar__Input input::-webkit-input-placeholder {
+  color: #8a8d91;
 }
 
-.search-bar input ::-ms-input-placeholder {
-  color: #8e8e8e;
+.NavBar__Main .NavBar__SearchBar .NavBar__Input input:-ms-input-placeholder {
+  color: #8a8d91;
 }
 
-.search-bar input ::placeholder {
-  color: #8e8e8e;
+.NavBar__Main .NavBar__SearchBar .NavBar__Input input::-ms-input-placeholder {
+  color: #8a8d91;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Input input::placeholder {
+  color: #8a8d91;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Search__Suggestions__Container {
+  position: relative;
+  top: 12px;
+  width: 375px;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Search__Suggestions__Container .NavBar__Search__Suggestions {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 75ms linear, -webkit-transform 38ms ease-out;
+  transition: opacity 75ms linear, -webkit-transform 38ms ease-out;
+  transition: opacity 75ms linear, transform 38ms ease-out;
+  transition: opacity 75ms linear, transform 38ms ease-out, -webkit-transform 38ms ease-out;
+  background: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Search__Suggestions__Container .NavBar__Search__Suggestions .NavBar__Search__Suggestions__UpArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 187.5px;
+  bottom: 0;
+  top: -6px;
+  background: white;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+  height: 14px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 14px;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Search__Suggestions__Container .NavBar__Search__Suggestions .NavBar__Suggestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: white;
+  border-radius: 6px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.NavBar__Main .NavBar__SearchBar .NavBar__Search__Suggestions__Container .NavBar__Search__Suggestions .NavBar__Suggestions .NavBar__Suggestions__Container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 362px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 12px 0 0 0;
+  width: 375px;
+  padding-top: 12px;
+}
+
+.NavBar__Main .NavBar__Actions__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 127px;
+          flex: 1 0 127px;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 24px;
+  white-space: nowrap;
+}
+
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions > * {
+  height: 24px;
+}
+
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions > * svg {
+  height: 100%;
+}
+
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions > *:not(:first-child) {
+  margin-left: 22px;
 }
 /*# sourceMappingURL=NavBar.css.map */

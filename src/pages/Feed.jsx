@@ -12,14 +12,13 @@ const Feed = () => {
     dispatch(postsService.query());
   }, []);
   const { posts } = useSelector((state) => state.posts);
-
   return (
     <div className="feed-container">
       {loadingStatus === 'loading' && <div className="loading"></div>}
       {loadingStatus === 'success' && <div className="Post__mainFeed">
-        {posts.map((post) => {
+        {posts.length ? posts.map((post) => {
           return <Post key={post._id} post={post} />;
-        })}
+        }) : "No posts yet"}
       </div>}
       {loadingStatus === 'failure' && <div className="message">
         <h1>500</h1>

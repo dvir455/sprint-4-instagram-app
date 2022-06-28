@@ -4,8 +4,12 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const POSTS_URL = 'http://localhost:3030/api/posts';
 
 const query = createAsyncThunk('posts/query', async () => {
-  const response = await axios.get(POSTS_URL);
-  return response.data;
+  // const response = await httpService.get(`${POSTS_URL}`);
+  // const URL = filterBy? `${POSTS_URL}?${filterBy}` : `${POSTS_URL}`;
+  // console.log(`${POSTS_URL}?${filterBy}`);
+  const response = await httpService.get(POSTS_URL);
+  console.log('response', response);
+  return response;
 });
 
 const addComment = createAsyncThunk(

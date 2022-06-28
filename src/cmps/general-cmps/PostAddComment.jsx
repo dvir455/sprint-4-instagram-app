@@ -8,7 +8,7 @@ import { faFaceSmile } from '@fortawesome/free-regular-svg-icons';
 const PostAddComment = (props) => {
   const [commentTxt, setCommentTxt] = useState('');
   const dispatch = useDispatch();
-  const { post } = props;
+  const { post, commentInputRef } = props;
 
   const commentHandler = (event, txt) => {
     event.preventDefault();
@@ -27,6 +27,7 @@ const PostAddComment = (props) => {
       {/* //TODO - Make a popup emoji list */}
       <FontAwesomeIcon icon={faFaceSmile} className="svg" />
       <input
+        ref={commentInputRef}
         type="text"
         value={commentTxt}
         onChange={(event) => {

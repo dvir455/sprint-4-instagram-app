@@ -6,13 +6,15 @@ import PostActions from '../general-cmps/PostActions';
 import PostAddComment from '../general-cmps/PostAddComment';
 import CommentsCmp from '../general-cmps/CommentsCmp';
 import { useHistory } from 'react-router-dom';
-import React from 'react';
+import React, {useRef} from 'react';
 
 const PostPopup = () => {
   const { posts } = useSelector((state) => state.posts);
   const { postId } = useParams();
   const post = posts[postId];
   const history = useHistory();
+
+  const commentInputRef = useRef(null);
 
   const routeChange = () => {
     const path = `/`;
@@ -46,12 +48,12 @@ const PostPopup = () => {
               </div>
             </div>
             <div className="popup-actions">
-              <PostActions post={post} />
+              <PostActions commentInputRef={commentInputRef} post={post} />
               <p className="post-likes">{post.likedBy.length} likes</p>
               <div className="post-date">{moment(post.createdAt).fromNow()}</div>
             </div>
             <div className="popup-add-comment">
-              <PostAddComment post={post} />
+              <PostAddComment commentInputRef={commentInputRef} post={post} />
             </div>
           </div>
         </article>

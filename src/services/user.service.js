@@ -47,9 +47,21 @@ const logout = createAsyncThunk('user/logout', async () => {
   }
 });
 
+const query = createAsyncThunk('user/query', async ({userName,searchValue}) => {
+  const URL = userName?`${USER_URL}/query/?username=${userName}`:`${USER_URL}/query/?searchValue=${searchValue}`;
+  try {
+    // const response = await httpService.get(`${USER_URL}/query/?username=${userName}`);
+    const response = await httpService.get(URL);
+    return response
+  } catch (e) {
+    throw new Error(e.message);
+  }
+});
+
 export const userService = {
   login,
   checkLoggon,
   logout,
   signup,
+  query,
 };
