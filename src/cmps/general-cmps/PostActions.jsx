@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { postsService } from '../../services/posts.service';
 
 import {
@@ -34,7 +34,6 @@ const PostActions = (props) => {
 
 
   const routeChange = () => {
-    console.log(commentInputRef);
     if (location.state?.background) return commentInputRef.current?.focus();
     const path = `/p/${post._id}`;
     history.push(path, { background: location });
@@ -43,10 +42,7 @@ const PostActions = (props) => {
   const likeHandler = () => {
     dispatch(postsService.likePost({
       postId: post._id,
-      // setIsLiked,
-      // isLiked
     })).then(() => {
-
       setIsLiked(!isLiked);
     });
   };

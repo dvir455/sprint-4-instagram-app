@@ -8,7 +8,6 @@ const query = createAsyncThunk('posts/query', async () => {
   // const URL = filterBy? `${POSTS_URL}?${filterBy}` : `${POSTS_URL}`;
   // console.log(`${POSTS_URL}?${filterBy}`);
   const response = await httpService.get(POSTS_URL);
-  console.log('response', response);
   return response;
 });
 

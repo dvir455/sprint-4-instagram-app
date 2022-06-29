@@ -1,0 +1,263 @@
+.AddPost__Container__Vertical {
+  // background-color: goldenrod;
+  position: relative;
+  // right: 50%;
+  // top: 50%;
+  z-index: 998;
+  // transform: translate(50%, 50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+
+  .AddPost__Container__Horizontal {
+    display: flex;
+    justify-content: center;
+
+    min-height: 0;
+    align-items: flex-start;
+
+    .AddPost__Container {
+      // width: 718px;
+      height: 761px;
+      margin: 20px;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 12px;
+
+      .AddPost__Container__Header {
+        display: flex;
+        border-bottom: 1px solid rgb(219, 219, 219);
+        height: 43px;
+        align-items: center;
+        h1 {
+          align-items: center;
+          text-align: center;
+          color: rgb(38, 38, 38);
+          display: flex;
+          flex-grow: 1;
+          font-weight: 600;
+          justify-content: center;
+        }
+      }
+
+      .AddPost__Container__Body {
+        height: 100%;
+
+        .AddPost__SelectPhoto__Container {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          padding: 24px;
+          height: 718px;
+          width: 718px;
+          flex: 0 0 auto;
+
+          .AddPost__SvgText {
+            margin-top: 16px;
+            display: flex;
+            flex: 0 0 auto;
+            justify-content: flex-start;
+
+            h2 {
+              text-align: center;
+              display: block;
+              color: rgb(38, 38, 38);
+              font-weight: 300;
+              font-size: 22px;
+              line-height: 22px;
+              margin: -4px 0 -5px;
+            }
+          }
+        }
+
+        .AddPost__Import__Button {
+          margin-top: 12px;
+          display: flex;
+          align-items: center;
+
+          .AddPost__Import__Button__Container {
+            margin-top: 24px;
+            input[type='file'] {
+              width: 0;
+              height: 0;
+              overflow: hidden;
+              opacity: 0;
+              display: none;
+            }
+            span {
+              position: relative;
+              background-color: rgb(0, 149, 246);
+              border: 1px solid transparent;
+              border-radius: 4px;
+              color: rgb(255, 255, 255);
+              font-size: 14px;
+              font-weight: 600;
+              padding: 5px 9px;
+              width: auto;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .AddPost__AddInfo__Container {
+          display: flex;
+          flex: 1 1 auto;
+          width: 1058px;
+          height: 100%;
+          .AddPost__AddInfo__Image {
+            display: flex;
+            width: calc(100% - 340px);
+
+            img {
+              background-repeat: no-repeat;
+              object-fit: cover;
+            }
+          }
+
+          .AddPost__AddInfo__Info__Container {
+            border-left: 1px solid rgb(219, 219, 219);
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 340px;
+
+            .AddPost__AddInfo__Info__Header {
+              width: 100%;
+              margin-left: 16px;
+              margin-right: 16px;
+              .AddPost__AddInfo__Info__Header__Container {
+                margin-top: 14px;
+                margin-bottom: 18px;
+                display: flex;
+                img {
+                  display: flex;
+                  flex: 0 0 auto;
+                  margin-right: 12px;
+                  width: 28px;
+                  height: 28px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
+
+                h3 {
+                  color: rgb(38, 38, 38);
+                  display: flex;
+                  align-items: center;
+                  flex: 1 1 auto;
+                  font-weight: 600;
+                  line-height: 16px;
+                }
+              }
+            }
+
+            .AddPost__AddInfo__Info__TextZone__Container {
+              border-bottom: 1px solid rgb(219, 219, 219);
+              display: flex;
+              flex-direction: column;
+
+              .AddPost__AddInfo__Info__TextArea__Container {
+                display: flex;
+                width: 100%;
+
+                textarea {
+                  width: 100%;
+                  height: 168px;
+                  padding: 0 16px;
+                  overflow: auto;
+                  resize: none;
+                  color: rgb(38, 38, 38);
+                }
+              }
+
+              .AddPost__AddInfo__Info__Emoji__Charcount {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                .AddPost__AddInfo__Info__Emoji {
+                  display: flex;
+                  flex-direction: column;
+                  padding: 4px 8px;
+
+                  .AddPost__AddInfo__Info__Emoji__Btn {
+                    display: flex;
+                    padding: 8px;
+
+                    color: rgb(142, 142, 142);
+
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              .AddPost__AddInfo__Info__Charcount__Container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .AddPost__AddInfo__Info__Charcount {
+                  display: flex;
+                  justify-content: center;
+                  padding: 0 16px;
+                  text-align: right;
+                  color: rgb(199, 199, 199);
+                  font-size: 12px;
+                  line-height: 12px;
+                  margin: -2 0 -3px;
+                }
+              }
+            }
+
+            .AddPost__AddInfo__Info__Location {
+              height: 44px;
+              padding-left: 8px;
+              padding-right: 16px;
+              display: flex;
+              flex-grow: 1;
+              align-items: center;
+              border-bottom: 1px solid rgb(219, 219, 219);
+              .AddPost__AddInfo__Info__Location__Input {
+                color: rgb(38, 38, 38);
+                padding: 4px 9px;
+                width: 100%;
+                height: 38px;
+                &::placeholder {
+                  color: #8e8e8e;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.AddPost__Background__Shadow {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+
+  .AddPost__Modal__Close {
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 8px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

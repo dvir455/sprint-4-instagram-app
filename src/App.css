@@ -2,6 +2,7 @@
 @import './styles/general.css';
 @import './styles/feed/Feed.css';
 @import './styles/navBar/NavBar.css';
+@import './styles/navBar/AddPost.css';
 @import './styles/feed/Post.css';
 @import './styles/fonts.css';
 @import './styles/login/Login.css';

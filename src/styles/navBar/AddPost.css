@@ -1,0 +1,388 @@
+.AddPost__Container__Vertical {
+  position: relative;
+  z-index: 998;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container {
+  height: 761px;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  height: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header h1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body {
+  height: 100%;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__SelectPhoto__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  height: 718px;
+  width: 718px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__SelectPhoto__Container .AddPost__SvgText {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__SelectPhoto__Container .AddPost__SvgText h2 {
+  text-align: center;
+  display: block;
+  color: #262626;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 22px;
+  margin: -4px 0 -5px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__Import__Button {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__Import__Button .AddPost__Import__Button__Container {
+  margin-top: 24px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__Import__Button .AddPost__Import__Button__Container input[type='file'] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__Import__Button .AddPost__Import__Button__Container span {
+  position: relative;
+  background-color: #0095f6;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 9px;
+  width: auto;
+  cursor: pointer;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 1058px;
+  height: 100%;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 340px);
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Image img {
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container {
+  border-left: 1px solid #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 340px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Header {
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Header .AddPost__AddInfo__Info__Header__Container {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Header .AddPost__AddInfo__Info__Header__Container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Header .AddPost__AddInfo__Info__Header__Container h3 {
+  color: #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container {
+  border-bottom: 1px solid #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__TextArea__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__TextArea__Container textarea {
+  width: 100%;
+  height: 168px;
+  padding: 0 16px;
+  overflow: auto;
+  resize: none;
+  color: #262626;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__Emoji__Charcount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__Emoji__Charcount .AddPost__AddInfo__Info__Emoji {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4px 8px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__Emoji__Charcount .AddPost__AddInfo__Info__Emoji .AddPost__AddInfo__Info__Emoji__Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__Charcount__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__TextZone__Container .AddPost__AddInfo__Info__Charcount__Container .AddPost__AddInfo__Info__Charcount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 16px;
+  text-align: right;
+  color: #c7c7c7;
+  font-size: 12px;
+  line-height: 12px;
+  margin: -2 0 -3px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location {
+  height: 44px;
+  padding-left: 8px;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location .AddPost__AddInfo__Info__Location__Input {
+  color: #262626;
+  padding: 4px 9px;
+  width: 100%;
+  height: 38px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location .AddPost__AddInfo__Info__Location__Input::-webkit-input-placeholder {
+  color: #8e8e8e;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location .AddPost__AddInfo__Info__Location__Input:-ms-input-placeholder {
+  color: #8e8e8e;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location .AddPost__AddInfo__Info__Location__Input::-ms-input-placeholder {
+  color: #8e8e8e;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container .AddPost__AddInfo__Info__Location .AddPost__AddInfo__Info__Location__Input::placeholder {
+  color: #8e8e8e;
+}
+
+.AddPost__Background__Shadow {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
+
+.AddPost__Background__Shadow .AddPost__Modal__Close {
+  z-index: 999;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 8px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=AddPost.css.map */

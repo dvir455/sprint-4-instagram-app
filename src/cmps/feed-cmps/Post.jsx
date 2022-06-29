@@ -8,7 +8,6 @@ import CommentsCmp from '../general-cmps/CommentsCmp';
 import PostAddComment from '../general-cmps/PostAddComment';
 
 const Post = (props) => {
-  const dispatch = useDispatch();
   const { post } = props;
   const imgUrl = imgList[post.imgUrl];
 

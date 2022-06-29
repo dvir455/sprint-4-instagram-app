@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { userService } from '../services/user.service';
+import { userService } from '../../services/user.service';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { imgList } from '../data/images/importImages';
-import UserModal from './search-cmps/userModal.jsx';
+import { imgList } from '../../data/images/importImages';
+import UserModal from '../search-cmps/userModal.jsx';
+import AddPost from './addPost';
 import {
   faComment,
   faSquarePlus,
@@ -12,11 +13,13 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 const NavBar = () => {
-  const userInfo = useSelector(state => state.user.user);
+  const userInfo = JSON.parse(sessionStorage.getItem('user'));
   const loadingStatus = useSelector(state => state.user.loadingStatus);
-
   const dispatch = useDispatch();
   const [users, setUsers] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+
   const logoutHandler = () => {
     try {
       dispatch(userService.logout());
@@ -45,7 +48,7 @@ const NavBar = () => {
     }
   }
 
-  const loader = () => { return <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> }
+  const loader = () => { return <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> }
 
   return (
     <nav className='NavBar__Main'>
@@ -61,7 +64,7 @@ const NavBar = () => {
 
               <input type="text" placeholder="Search" onChange={(event) => { handleSearch(event.target.value) }} />
 
-            {loadingStatus === "loading" && loader() }
+              {loadingStatus === "loading" && loader()}
             </div>
             {users && users.length > 0 && <div className="NavBar__Search__Suggestions__Container">
               <div className="NavBar__Search__Suggestions">
@@ -81,14 +84,16 @@ const NavBar = () => {
               <a href='/'>
                 Home
               </a>
-              <FontAwesomeIcon
-                icon={faComment}
-                className="svg"
-              />
-
+              <button>
+                <FontAwesomeIcon
+                  icon={faComment}
+                  className="svg"
+                />
+              </button>
               <button> <FontAwesomeIcon
                 icon={faSquarePlus}
                 className="svg"
+                onClick={() => setIsOpen(true)}
               />
               </button>
               <button>
@@ -102,7 +107,7 @@ const NavBar = () => {
                 className="svg"
               /></button>
 
-              <button className='NavBar__PofilePic'><img src={imgList.by} alt="" /></button>
+              <button className='NavBar__PofilePic'><img src={userInfo.profilePic} alt="" /></button>
 
               <button onClick={logoutHandler}>Logout</button>
 
@@ -112,7 +117,7 @@ const NavBar = () => {
         </div>
 
       </div>
-
+      <AddPost isOpen={isOpen} setIsOpen={setIsOpen} />
     </nav>
   );
 };

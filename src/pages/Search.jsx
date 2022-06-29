@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { userService } from "../services/user.service";
 import UserModal from "../cmps/search-cmps/userModal";
-import NavBar from "../cmps/NavBar";
+import NavBar from "../cmps/NavBar/NavBar";
 const Search = (props) => {
   const dispatch = useDispatch();
   const { searchValue } = useParams();

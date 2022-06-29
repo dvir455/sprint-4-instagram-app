@@ -18,6 +18,10 @@
 }
 
 .NavBar__Main .NavBar__PofilePic img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: inherit;
 }
 
@@ -265,6 +269,11 @@
   display: flex;
   padding-left: 24px;
   white-space: nowrap;
+}
+
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions button,
+.NavBar__Main .NavBar__Actions__Container .NavBar_Actions a {
+  cursor: pointer;
 }
 
 .NavBar__Main .NavBar__Actions__Container .NavBar_Actions > * {

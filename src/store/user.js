@@ -6,7 +6,7 @@ const userSlice = createSlice({
   initialState: {
     user: '',
     status: null,
-    loadingStatus: null
+    loadingStatus: null,
   },
   reducers: {},
   extraReducers: {
@@ -40,6 +40,8 @@ const userSlice = createSlice({
     [userService.checkLoggon.fulfilled]: (state, action) => {
       state.status = 'success';
       state.user = action.payload;
+      if (!sessionStorage.getItem('user'))
+        sessionStorage.setItem('user', JSON.stringify(action.payload));
     },
     [userService.checkLoggon.rejected]: (state, action) => {
       state.status = 'failure';

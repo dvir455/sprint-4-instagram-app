@@ -6,7 +6,7 @@ import PostActions from '../general-cmps/PostActions';
 import PostAddComment from '../general-cmps/PostAddComment';
 import CommentsCmp from '../general-cmps/CommentsCmp';
 import { useHistory } from 'react-router-dom';
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 
 const PostPopup = () => {
   const { posts } = useSelector((state) => state.posts);

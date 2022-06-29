@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './cmps/NavBar';
+import NavBar from './cmps/NavBar/NavBar';
 import Feed from './pages/Feed';
 import Login from './pages/Login';
 import PostPopup from './cmps/feed-cmps/PostPopup';
@@ -17,10 +17,9 @@ function App() {
   const background = location.state?.background;
 
   useEffect(() => {
-    if(!background) document.body.style.overflow = "auto";
-    else document.body.style.overflow = "hidden";
-  }, [background])
-  console.log(location);
+    if (!background) document.body.style.overflow = 'auto';
+    else document.body.style.overflow = 'hidden';
+  }, [background]);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -32,8 +31,8 @@ function App() {
   const isLoggedIn = () => {
     return (
       <React.Fragment>
-        <Feed />
         <NavBar />
+        <Feed />
       </React.Fragment>
     );
   };
@@ -44,14 +43,9 @@ function App() {
         <Route path="/" exact>
           {loggedIn ? isLoggedIn() : <Login />}
         </Route>
-        <Route path="/emailsignup">
-          <EmailSignup />
-        </Route>
-        <Route path="/search/:searchValue">
-          <Search />
-        </Route>
+        <Route path="/emailsignup" children={<EmailSignup />} />
+        {/* <Route path="/search/:searchValue" children={<Search />} /> */}
       </Switch>
-
       {background && <Route path="/p/:postId" children={<PostPopup />} />}
     </div>
   );

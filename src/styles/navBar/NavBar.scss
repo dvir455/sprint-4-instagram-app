@@ -9,6 +9,9 @@
     height: 24px;
     width: 24px;
     img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
       border-radius: inherit;
     }
   }
@@ -159,6 +162,10 @@
     justify-content: flex-end;
 
     .NavBar_Actions {
+      button,
+      a {
+        cursor: pointer;
+      }
       display: flex;
       padding-left: 24px;
       white-space: nowrap;
