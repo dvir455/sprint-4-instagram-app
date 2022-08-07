@@ -15,7 +15,8 @@ const postsSlice = createSlice({
     },
     [postsService.query.fulfilled]: (state, action) => {
       state.loadingStatus = 'success';
-      state.posts = action.payload;
+      action.payload.isPopUp ? (state.popUpPost = action.payload.response) : (state.posts = action.payload.response);
+      // state.posts = action.payload.response;
     },
     [postsService.query.rejected]: (state, action) => {
       state.loadingStatus = 'failure';
@@ -37,10 +38,7 @@ const postsSlice = createSlice({
     [postsService.deleteComment.fulfilled]: (state, action) => {
       state.status = 'success';
       state.posts[action.payload.postId].comments = action.payload.postComments;
-      // state.posts[action.payload.postId].comments.splice(
-      //   action.payload.commentIdx,
-      //   1
-      // );
+    
     },
     [postsService.deleteComment.rejected]: (state, action) => {
       state.status = 'failure';
@@ -50,9 +48,20 @@ const postsSlice = createSlice({
     },
     [postsService.likePost.fulfilled]: (state, action) => {
       state.status = 'success';
-      state.posts[action.payload.postId].likedBy = action.payload.likedBy;
+     const postIdx = state.posts.findIndex((post) => post._id === action.payload.postId)
+      state.posts[postIdx].likedBy = action.payload.likedBy;
     },
     [postsService.likePost.rejected]: (state, action) => {
+      state.status = 'failure';
+    },
+
+    [postsService.newPost.pending]: (state, action) => {
+      state.status = 'loading';
+    },
+    [postsService.newPost.fulfilled]: (state, action) => {
+      state.status = 'success';
+    },
+    [postsService.newPost.rejected]: (state, action) => {
       state.status = 'failure';
     },
   },

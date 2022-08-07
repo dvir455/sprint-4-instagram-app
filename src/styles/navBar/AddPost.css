@@ -55,24 +55,56 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header h1 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: #262626;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #262626;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header .AddPost__Container__Header__ShareBtn {
+  -ms-flex-preferred-size: 48px;
+      flex-basis: 48px;
+  float: right;
+  padding: 16px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header .AddPost__Container__Header__ShareBtn button {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0095f6;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header .AddPost__Container__Header__BackBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 48px;
+      flex-basis: 48px;
+  float: right;
+  padding: 16px;
+}
+
+.AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Header .AddPost__Container__Header__BackBtn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 30px;
+  color: #262626;
 }
 
 .AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body {
@@ -174,6 +206,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: calc(100% - 340px);
 }
 
@@ -181,6 +218,8 @@
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .AddPost__Container__Vertical .AddPost__Container__Horizontal .AddPost__Container .AddPost__Container__Body .AddPost__AddInfo__Container .AddPost__AddInfo__Info__Container {

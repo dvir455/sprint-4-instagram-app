@@ -1,7 +1,4 @@
-import { useState } from 'react';
 import { imgList } from '../../data/images/importImages';
-import { useDispatch, useSelector } from 'react-redux';
-import { utilService } from '../../services/util.services';
 import moment from 'moment';
 import PostActions from '../general-cmps/PostActions';
 import CommentsCmp from '../general-cmps/CommentsCmp';
@@ -9,7 +6,7 @@ import PostAddComment from '../general-cmps/PostAddComment';
 
 const Post = (props) => {
   const { post } = props;
-  const imgUrl = imgList[post.imgUrl];
+  const imgUrl = (post.imgUrl === 1 || post.imgUr === 2 ||post.imgUr === 3 )?imgList[post.imgUrl]:post.imgUrl;
 
   return (
     <article className="post-container">
@@ -26,7 +23,7 @@ const Post = (props) => {
         </div>
       </header>
       <div className="post-img">
-        <img src={imgUrl} />
+        <img src={`${imgUrl}`} />
       </div>
       <div>
         <PostActions post={post} />

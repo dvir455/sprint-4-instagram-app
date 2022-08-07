@@ -33,8 +33,9 @@ const PostActions = (props) => {
 
 
 
-  const routeChange = () => {
+  const routeChange = async () => {
     if (location.state?.background) return commentInputRef.current?.focus();
+    await dispatch(postsService.query(post._id))
     const path = `/p/${post._id}`;
     history.push(path, { background: location });
   };

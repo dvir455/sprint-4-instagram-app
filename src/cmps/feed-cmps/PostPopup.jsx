@@ -1,17 +1,29 @@
-import { imgList } from '../../data/images/importImages';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
 import PostActions from '../general-cmps/PostActions';
 import PostAddComment from '../general-cmps/PostAddComment';
 import CommentsCmp from '../general-cmps/CommentsCmp';
 import { useHistory } from 'react-router-dom';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { httpService } from '../../services/http.service';
+
+const POSTS_URL = 'http://localhost:3030/api/posts';
 
 const PostPopup = () => {
-  const { posts } = useSelector((state) => state.posts);
   const { postId } = useParams();
-  const post = posts[postId];
+  const [post, setPost] = React.useState(null);
+
+  const fetchPost = async () => {
+    const URL = `${POSTS_URL}/${postId}`
+    const response = await httpService.get(URL);
+    setPost(response);
+  }
+
+  useEffect(() => {
+    fetchPost();
+  }, [postId]);
+
   const history = useHistory();
 
   const commentInputRef = useRef(null);
@@ -23,17 +35,17 @@ const PostPopup = () => {
 
   return (
     <React.Fragment>
-      {post && <section className="post-popup-container">
+      {post ? <section className="post-popup-container">
         <div className="blacked-background">
           <button onClick={routeChange}>✕</button>
         </div>
         <article className="post-popup">
           <div className="popup-image-container">
-            <img className="popup-img" src={imgList[post.imgUrl]} />
+            <img className="popup-img" src={post.imgUrl} />
           </div>
           <div className="popup-info-container">
             <div className="popup-user-info">
-              <img className="user-profile-pic" src={imgList.by} alt="" />
+              <img className="user-profile-pic" src={post.by.imgUrl} alt="" />
               <a href="">{post.by.fullname}</a>
               <p>{post.loc.name}</p>
             </div>
@@ -57,7 +69,7 @@ const PostPopup = () => {
             </div>
           </div>
         </article>
-      </section>}
+      </section> : <div>Loading...</div>}
     </React.Fragment>
   );
 };

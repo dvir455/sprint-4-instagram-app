@@ -34,14 +34,42 @@
         border-bottom: 1px solid rgb(219, 219, 219);
         height: 43px;
         align-items: center;
+        justify-content: center;
+        // position: absolute;
         h1 {
-          align-items: center;
-          text-align: center;
-          color: rgb(38, 38, 38);
           display: flex;
+          justify-content: center;
+          color: rgb(38, 38, 38);
           flex-grow: 1;
           font-weight: 600;
-          justify-content: center;
+        }
+        .AddPost__Container__Header__ShareBtn {
+          flex-basis: 48px;
+          float: right;
+          padding: 16px;
+          button {
+            cursor: pointer;
+            font-weight: 600;
+            color: rgb(0, 149, 246);
+            // display: flex;
+            // margin-right: 50px;
+          }
+        }
+
+        .AddPost__Container__Header__BackBtn {
+          display: flex;
+          flex-basis: 48px;
+          float: right;
+          padding: 16px;
+          button {
+            display: flex;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 30px;
+            color: rgb(38, 38, 38);
+            // display: flex;
+            // margin-right: 50px;
+          }
         }
       }
 
@@ -112,11 +140,15 @@
           height: 100%;
           .AddPost__AddInfo__Image {
             display: flex;
+            align-content: center;
+            justify-content: center;
             width: calc(100% - 340px);
 
             img {
               background-repeat: no-repeat;
               object-fit: cover;
+              height: 100%;
+              width: 100%;
             }
           }
 

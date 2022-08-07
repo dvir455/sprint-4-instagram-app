@@ -11,6 +11,7 @@ const Feed = () => {
   useEffect(() => {
     dispatch(postsService.query());
   }, []);
+  
   const { posts } = useSelector((state) => state.posts);
   return (
     <div className="feed-container">
